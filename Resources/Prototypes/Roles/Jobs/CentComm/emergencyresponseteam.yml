@@ -9,13 +9,20 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirement
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 15h
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 4h
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTLeaderGear
@@ -81,7 +88,7 @@
     pocket1: MagazineRifle
     pocket2: MagazineRifle
   inhand:
-  - WeaponRifleLecter
+  - WeaponRifleLecterXL8
   storage:
     back:
     - WeaponDisabler
@@ -90,6 +97,14 @@
     - BoxZiptie
     - CrowbarRed
     - MagazineMagnum
+
+- type: chameleonOutfit
+  id: ERTLeaderChameleonOutfit
+  job: ERTLeader
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTLeader
+    neck: ClothingNeckBronzeheart
 
 # Chaplain
 - type: job
@@ -102,6 +117,13 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirement
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 5h
+  - !type:DepartmentTimeRequirement
+    department: Epistemics
+    time: 5h
   accessGroups:
   - AllAccess
   access:
@@ -111,7 +133,7 @@
     components:
     - type: BibleUser #Lets them heal with bibles
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTChaplainGear
@@ -175,6 +197,16 @@
     - FoodBakedBunHotX
     - Lighter
 
+- type: chameleonOutfit
+  id: ERTChaplainChameleonOutfit
+  job: ERTChaplain
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTChaplain
+    mask: ClothingMaskGasERT
+    outerClothing: ClothingOuterHardsuitERTChaplain
+    shoes: ClothingShoesBootsMagAdv
+
 # Engineer
 - type: job
   id: ERTEngineer
@@ -186,13 +218,20 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirements
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 5h
+  - !type:DepartmentTimeRequirement
+    department: Engineering
+    time: 5h
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTEngineerGear
@@ -250,6 +289,14 @@
     - SheetSteel
     - SheetGlass
 
+- type: chameleonOutfit
+  id: ERTEngineerChameleonOutfit
+  job: ERTEngineer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTEngineer
+    neck: ClothingNeckEngineermedal
+
 # Security
 - type: job
   id: ERTSecurity
@@ -257,17 +304,21 @@
   description: job-description-ertsecurity
   playTimeTracker: JobERTSecurity
   setPreference: false
-  startingGear: ERTEngineerGearEVA
+  startingGear: ERTSecurityGearEVA
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirements
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 15h
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTSecurityGear
@@ -343,6 +394,14 @@
     - CrowbarRed
     - MagazinePistol
 
+- type: chameleonOutfit
+  id: ERTSecurityChameleonOutfit
+  job: ERTSecurity
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTSecurity
+    neck: ClothingNeckSecuritymedal
+
 # Medical
 - type: job
   id: ERTMedical
@@ -354,13 +413,20 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirements
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 5h
+  - !type:DepartmentTimeRequirement
+    department: Medical
+    time: 10h
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTMedicalGear
@@ -410,6 +476,14 @@
     - ChemistryBottleEpinephrine
     - ChemistryBottleEpinephrine
 
+- type: chameleonOutfit
+  id: ERTMedicalChameleonOutfit
+  job: ERTMedical
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTMedical
+    neck: ClothingNeckStethoscope
+
 # Janitor
 - type: job
   id: ERTJanitor
@@ -421,13 +495,20 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  requirements: # DeltaV - Playtime requirements
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 5h
+  - !type:RoleTimeRequirement
+    role: JobJanitor
+    time: 2h
   accessGroups:
   - AllAccess
   access:
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    implants: [ CentCommImplant, DeathRattleImplantCentcomm ] # Delta-V - Changed Mindshield implant to Centcomm implant
 
 - type: startingGear
   id: ERTJanitorGear
@@ -472,3 +553,12 @@
     - Soap
     - CrowbarRed
     - AdvMopItem
+
+- type: chameleonOutfit
+  id: ERTJanitorChameleonOutfit
+  job: ERTJanitor
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetHardsuitERTJanitor
+    neck: ClothingNeckScarfStripedPurple
+    eyes: ClothingEyesGlassesSunglasses

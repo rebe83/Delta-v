@@ -13,10 +13,10 @@
   id: ServiceWorkerJumpsuit
   name: loadout-group-serviceworker-jumpsuit
   loadouts:
-  - ServiceWorkerJumpsuit
-  - ServiceWorkerJumpskirt
-  - ServiceWorkerJumpsuitDark
-  - ServiceWorkerJumpskirtDark
+  - GreenJumpsuit
+  - GreenJumpskirt
+  - DarkGreenJumpsuit
+  - DarkGreenJumpskirt
   - BartenderJumpsuit
   - BartenderJumpskirt
   - BartenderJumpsuitPurple
@@ -65,6 +65,14 @@
   - ScarfGreen
   - ScarfBrown
 
+## Clown
+- type: loadoutGroup
+  id: ClownMask
+  name: loadout-group-clown-mask
+  loadouts:
+  - ClownMask
+  - BlushingClownMask
+
 ## Mime
 - type: loadoutGroup
   id: MimeNeck
@@ -83,6 +91,43 @@
   - ScarfBlack
   - ScarfPurple
   - ScarfZebra
+
+## Assistants
+- type: loadoutGroup
+  id: AssistantHead
+  name: loadout-group-assistant-head
+  minLimit: 0
+  loadouts:
+  - BlackBandana
+  - BlueBandana
+  - GoldBandana
+  - GreenBandana
+  - GreyBandana
+  - RedBandana
+  - BrownBandana
+  - SkullBandana
+  - BartenderHead
+  - BartenderBowler
+  - RedBeret
+  - BrownFedora
+  - GreyFedora
+  - BlackFedora
+  - ChocFedora
+  - WhiteFedora
+  - GreyFlatCap
+  - BlackFlatCap
+  - BrownFlatCap
+  - BrownCowboyHat
+  - BlackCowboyHat
+  - GreyCowboyHat
+  - RedCowboyHat
+  - WhiteCowboyHat
+  - BountyHunterHat
+  - StrawHat
+  - HeadBand
+  - OutlawHat
+  - WitchHat
+  - PirateHat
 
 # Logistics
 ## Courier
@@ -196,6 +241,7 @@
   loadouts:
   - SalvageCloak
   - ScarfBrown
+  - SalvageMantle
 
 - type: loadoutGroup
   id: SalvageSpecialistJumpsuit
@@ -213,6 +259,7 @@
   minLimit: 0
   loadouts:
   - CorpsmanBeret
+  - BrigMedicalBeret
 
 - type: loadoutGroup
   id: BrigMedicNeck
@@ -220,6 +267,7 @@
   minLimit: 0
   loadouts:
   - ScarfRed
+  - ScarfBlack
   - ScarfBlue
   - SecurityPoncho
 
@@ -236,9 +284,26 @@
   id: BrigMedicOuterClothing
   name: loadout-group-brig-medic-outerclothing
   loadouts:
+  - LongcoatBrigmedic
   - StasecWinterCoatCorpsman
   - PlateCarrier
   - DuraVest
+  - ArmorVestSlim
+
+- type: loadoutGroup
+  id: CorpsmanEyewear
+  name: loadout-group-corpsman-eyewear
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CorpsmanGlasses
+  - PrescriptionCorpsmanGlasses
+  - MedicalHud
+  - MedicalEyePatchHud
+  - PrescriptionMedHud
+  - Glasses
+  - GlassesJamjar
+  - GlassesJensen
 
 - type: loadoutGroup
   id: BrigMedicBack
@@ -286,6 +351,7 @@
   - SecurityFirearmWeaponPistolSLP57
   - SecurityFirearmWeaponPistolMk58
   - SecurityFirearmWeaponDisabler
+  - SecurityFirearmTruncheon
 
 - type: loadoutGroup
   id: SecurityRevolverFirearm
@@ -296,6 +362,7 @@
   - SecurityRevolverInspector
   - SecurityFirearmWeaponRevolverFitz
   - SecurityRevolverWeaponRevolverLucky
+  - SecurityFirearmTruncheon
 
 - type: loadoutGroup
   id: SecurityFirearmAmmo
@@ -332,6 +399,7 @@
   - SecurityRevolverWeaponRevolverLucky
   - SecurityFirearmWeaponRevolverDeckard
   - SecurityFirearmWeaponRevolverK38Master
+  - SecurityFirearmTruncheon
 
 - type: loadoutGroup
   id: SecurityAllAmmo
@@ -346,6 +414,31 @@
   - SecurityFirearmSpeedLoaderSpecialRubber
   - SecurityFirearmSpeedLoaderSpecial
 
+## Security Gloves
+- type: loadoutGroup
+  id: SecurityGloves
+  name: loadout-group-security-gloves
+  minLimit: 0
+  loadouts:
+  - SecurityClothingHandsGlovesColorBlack
+  - SecurityClothingHandsGlovesFingerless
+
+## Security Glasses
+- type: loadoutGroup
+  id: SecurityEyewear
+  name: loadout-group-security-eyewear
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SecurityGlasses
+  - PrescriptionSecurityGlasses
+  - SecurityHud
+  - SecurityEyePatchHud
+  - PrescriptionSecurityHud
+  - Glasses
+  - GlassesJamjar
+  - GlassesJensen
+
 ## Security Officer
 - type: loadoutGroup
   id: SecurityNeck
@@ -353,6 +446,7 @@
   minLimit: 0
   loadouts:
   - ScarfRed
+  - ScarfBlack
   - SecurityPoncho
 
 - type: loadoutGroup
@@ -362,7 +456,9 @@
   - PlateCarrier
   - DuraVest
   - StasecSweater
+  - LongcoatSecurity
   - StasecWinterCoat
+  - ArmorVestSlim
 
 ## Warden
 - type: loadoutGroup
@@ -371,7 +467,9 @@
   loadouts:
   - PlateCarrier
   - DuraVest
+  - WardenLongcoat
   - StasecWinterCoatWarden
+  - ArmorVestSlim
 
 ## Head of Security
 - type: loadoutGroup
@@ -380,7 +478,10 @@
   loadouts:
   - PlateCarrier
   - DuraVest
+  - HeadofSecurityLongcoat
   - StasecWinterCoatHoS
+  - HeadOfSecurityTrenchcoat
+  - ArmorVestSlim
 
 ## Detective
 - type: loadoutGroup
@@ -400,10 +501,12 @@
   id: DetectiveOuterClothingDeltaV
   name: loadout-group-detective-outerclothing
   loadouts:
+  - LongcoatSecurity
   - StasecWinterCoatDet
   - PlateCarrier
   - DuraVest
   - DetPlatedCoat
+  - ArmorVestSlim
 
 # Medical
 ## Psychologist
@@ -427,6 +530,12 @@
   - WinterCoatPlaid
   - PsychologistCoatBomber
   - PsychologistSweater
+
+- type: loadoutGroup
+  id: PsychologistBelt
+  name: loadout-group-psychologist-belt
+  loadouts:
+  - PaperworkBelt
 
 - type: loadoutGroup
   id: PsychologistShoes
@@ -568,6 +677,7 @@
   minLimit: 0
   loadouts:
   - ScarfOrange
+  - ScarfRed
 
 ## Atmospheric Technician
 - type: loadoutGroup
@@ -577,6 +687,17 @@
   loadouts:
   - ScarfLightBlue
   - ScarfOrange
+
+- type: loadoutGroup
+  id: AtmosphericTechnicianHead
+  name: loadout-group-atmospheric-technician-head
+  minLimit: 0
+  loadouts:
+  - StationEngineerHardhatYellow
+  - StationEngineerHardhatOrange
+  - StationEngineerHardhatRed
+  - AtmosHardHatBlue
+  - AtmosBeret
 
 ## Clerk
 - type: loadoutGroup
@@ -694,6 +815,18 @@
   - WhiteShoes
   - ScienceWinterBoots
 
+- type: loadoutGroup
+  id: RoboticistGlasses
+  name: loadout-group-roboticist-glasses
+  minLimit: 0
+  loadouts:
+  - ClothingEyesHudDiagnostic
+  - ClothingEyesPrescriptionDiagHud
+  - ClothingEyesEyepatchHudDiag
+  - Glasses
+  - GlassesJamjar
+  - GlassesJensen
+
 # Command
 ## Captain
 - type: loadoutGroup
@@ -731,6 +864,14 @@
   - LaceupShoes
   - HoPWinterBoots
 
+## chift engenier
+- type: loadoutGroup
+  id: ChiefEngineerGloves
+  name: loadout-group-chief-engineer-gloves
+  minLimit: 0
+  loadouts:
+  - insulatedgloves
+
 # PDAs
 - type: loadoutGroup
   id: PassengerPDADelta
@@ -765,6 +906,13 @@
   - MedicalInternPDA
   - PracticalNursePDA
   - ResidentPDA
+
+- type: loadoutGroup
+  id: ChemistryPDA
+  name: loadout-group-chemist-id
+  loadouts:
+  - ChemistryPDA
+  - PharmacistPDA # DeltaV
 
 - type: loadoutGroup
   id: AtmosPDADelta
