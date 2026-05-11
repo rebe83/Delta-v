@@ -647,7 +647,7 @@
     allowSpeech: true
     allowMovement: true
     name: ghost-role-information-hamlet-name
-    description: ghost-role-information-hamlet-description
+    description: ghost-role-information-hamlet-description-dv # DeltaV - custom description
     rules: ghost-role-information-nonantagonist-rules
   - type: GhostTakeoverAvailable
   - type: InteractionPopup
